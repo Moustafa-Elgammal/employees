@@ -252,7 +252,7 @@
 
 
             </p>
-            <h3 class="text-center">Add new Employee:</h3>
+            <h3 class="text-center">Add new Employee:<a class="btn btn-info" href="employees.jsp"> Show All Employees</a></h3>
             <hr/>
             <form action="index.jsp" method="POST">
                 
@@ -456,10 +456,7 @@
                          required
                     >
                 </div>
-            </div>   
-                        
-                        
-                        
+            </div>                           
             </form>
         </div>
     </div>  
