@@ -150,10 +150,10 @@
                             Query = "SELECT * FROM employees_projects left join projects "
                                     + "on projects.id = employees_projects.p_id WHERE e_id = '"
                                     + employees.getInt("id")+"';";
-                            skills = db.executeQueryGetResults(Query);                                        
-                            while(skills.next()){ 
+                            projects = db.executeQueryGetResults(Query);                                        
+                            while(projects.next()){ 
                             %>
-                                <%= skills.getString("name")%>,
+                                <%= projects.getString("name")%>,
                             <%
                             }
                          %>
@@ -164,10 +164,10 @@
                             Query = "SELECT * FROM employees_courses left join courses "
                                     + "on courses.id = employees_courses.c_id WHERE e_id = '"
                                     + employees.getInt("id")+"';";
-                            skills = db.executeQueryGetResults(Query);                                        
-                            while(skills.next()){ 
+                            courses = db.executeQueryGetResults(Query);                                        
+                            while(courses.next()){ 
                             %>
-                                <%= skills.getString("name")%>,
+                                <%= courses.getString("name")%>,
                             <%
                             }
                          %>
@@ -178,18 +178,18 @@
                             Query = "SELECT * FROM employees_languages left join languages "
                                     + "on languages.id = employees_languages.l_id WHERE e_id = '"
                                     + employees.getInt("id")+"';";
-                            skills = db.executeQueryGetResults(Query);                                        
-                            while(skills.next()){ 
+                            languages = db.executeQueryGetResults(Query);                                        
+                            while(languages.next()){ 
                             %>
-                                <%= skills.getString("name")%>,
+                                <%= languages.getString("name")%>,
                             <%
                             }
                          %>
                     </td>
                     
                     <td> 
-                        <a href="delete.jsp?id=<%= employees.getInt("id")%>"> 
-                            <i class="fa fa-trash"></i>
+                        <a class="btn btn-danger btn_delete" href="delete.jsp?id=<%= employees.getInt("id")%>"> 
+                            <i class="fa fa-trash "></i>
                         </a>
                     </td>
                   </tr>
@@ -204,6 +204,17 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>   
   <script>
+      jQuery(document).ready(function($){
+          
+          $(".btn_delete").click(function(e){
+              var check = prompt("Are you sure about deleteing this employee? yes/no");
+              if(check == null || check.toLowerCase() !== "yes"){
+                e.preventDefault();  
+              }  
+          });
+          
+          
+      });
          
   </script>
 </body>
