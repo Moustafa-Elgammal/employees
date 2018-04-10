@@ -327,7 +327,7 @@
                         <label for="inputLanguages" class="col-sm-4 col-form-label">
                             Language: 
                             <button id="add_languages" class="btn btn-info add_language_button">
-                                <i class="fa fa-copy"></i>
+                                <i class="fa fa-plus"></i>
                             </button>
                         </label>
                         <div class="col-sm-8">
@@ -358,7 +358,7 @@
                         <label for="inputSkills" class="col-sm-4 col-form-label">
                             Skill: 
                             <button id="add_skills" class="btn btn-info add_skill_button">
-                                <i class="fa fa-copy"></i>
+                                <i class="fa fa-plus"></i>
                             </button>
                         </label>
                         <div class="col-sm-8">
@@ -390,7 +390,7 @@
                         <label for="inputCourses" class="col-sm-4 col-form-label">
                             Course: 
                             <button id="add_courses" class="btn btn-info add_course_button">
-                                <i class="fa fa-copy"></i>
+                                <i class="fa fa-plus"></i>
                             </button>
                         </label>
                         <div class="col-sm-8">
@@ -423,7 +423,7 @@
                         <label for="inputSrojects" class="col-sm-4 col-form-label">
                             Project:
                             <button id="add_projects" class="btn btn-info add_project_button">
-                                <i class="fa fa-copy"></i>
+                                <i class="fa fa-plus"></i>
                             </button>
                         </label>
                         <div class="col-sm-8">
